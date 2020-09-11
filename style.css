@@ -7,6 +7,13 @@ body {
 	background-color: #f0db4f;
 }
 
+.container {
+    display: block;
+    padding-top: 100px;
+
+}
+
+
 h1, p {
 	font-family: sans-serif;
 	text-align: center;
@@ -26,6 +33,10 @@ p {
 }
 h2, h3 {
     text-align: center;
+}
+
+#botSays {
+    padding-top: 50px;
 }
 
 input {
