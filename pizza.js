@@ -12,8 +12,7 @@ let orderedPizza = "";
 const isValidPizza = (pizza) => {
     if (vegetarian.toLowerCase().includes(pizza.toLowerCase()) ||
         hawaiian.toLowerCase().includes(pizza.toLowerCase()) ||
-        pepperoni.toLowerCase().includes(pizza.toLowerCase()))
-    {
+        pepperoni.toLowerCase().includes(pizza.toLowerCase())) {
         return true 
     } else {
         return false 
@@ -36,6 +35,8 @@ const calculateCookingTime = (orderedQuantity) => {
 }
 
 const submitAnswer = () => { 
+    document.getElementById("answer").focus(); 
+
     let answer = document.getElementById("answer").value;
 
     // Handle pizza order
@@ -68,8 +69,17 @@ const submitAnswer = () => {
     and take ${cookingTime} minutes. `;
 }
 
+let input = document.getElementById("answer");
+input.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("submitButton").click();
+    }
+});
 
 // TODOS:
+// hanetra flera Thank "rumdor"
+// hantera små bokstäv er osv.
 // Snygga till lite
-// Hantera enter-tryck
-// fokus i inputbox
+// - Hantera enter-tryck 
+// - fokus i inputbox
